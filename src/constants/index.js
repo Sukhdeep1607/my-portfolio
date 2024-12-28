@@ -25,7 +25,7 @@ export const PROJECTS = [
     projectlink:["https://internship-suvidha.vercel.app/"],
     description:
       "Designed and built a responsive and user-friendly website for Suvidha Foundation, enhancing their online presence and accessibility.Utilized HTML, CSS, and JavaScript to create a dynamic and interactive user interface, ensuring a seamless user experience. Implemented Bootstrap to achieve a responsive design, ensuring the website is optimized for various devicesand screen sizes.",
-    technologies: ["HTML", "CSS", "Javascript"],
+    technologies: ["HTML", "CSS", "Javascript","BootStrap"],
   },
   {
     title: "E-Commerce Website",

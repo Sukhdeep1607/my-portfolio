@@ -1,5 +1,6 @@
 import { PROJECTS } from "../constants";
-import { animate, delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
+
 const Projects = () => {
   return (
     <div className="border-b border-neutral-900 pb-4">
@@ -12,7 +13,7 @@ const Projects = () => {
         Projects
       </motion.h2>
       <div>
-        {PROJECTS.map((projects, index) => (
+        {PROJECTS.map((project, index) => (
           <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
@@ -23,8 +24,8 @@ const Projects = () => {
               <img
                 height={150}
                 width={150}
-                src={projects.image}
-                alt={projects.title}
+                src={project.image}
+                alt={project.title}
                 className="mb-6 rounded"
               />
             </motion.div>
@@ -34,15 +35,24 @@ const Projects = () => {
               transition={{ duration: 1 }}
               className="w-full lg:w-3/4 max-w-xl"
             >
-              <h6 className="mb-2 font-semibold">{projects.title}</h6>
+              <h6 className="mb-2 font-semibold">{project.title}</h6>
               <p className="mb-4 text-neutral-400">
-                {projects.description}{" "}
-                <a href="https://github.com/Sukhdeep1607/ecommerce" target="_blank" rel="noopener noreferrer">Click Here</a>
+                {project.description}{" "}
+                {project.projectlink.length > 0 && (
+                  <a
+                    href={project.projectlink[0]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-purple-500 underline"
+                  >
+                    View Project
+                  </a>
+                )}
               </p>
-              {projects.technologies.map((tech, index) => (
+              {project.technologies.map((tech, techIndex) => (
                 <span
                   className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900"
-                  key={index}
+                  key={techIndex}
                 >
                   {tech}
                 </span>
