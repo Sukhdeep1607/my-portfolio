@@ -1,5 +1,6 @@
 import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
+import Suvidhafoundation from "../assets/projects/Suvidhafoundation.jpeg"
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 
@@ -18,6 +19,14 @@ export const EXPERIENCES = [
 ];
 
 export const PROJECTS = [
+  {
+    title: "Suvidha Foundation",
+    image: Suvidhafoundation,
+    projectlink:["https://internship-suvidha.vercel.app/"],
+    description:
+      "Designed and built a responsive and user-friendly website for Suvidha Foundation, enhancing their online presence and accessibility.Utilized HTML, CSS, and JavaScript to create a dynamic and interactive user interface, ensuring a seamless user experience. Implemented Bootstrap to achieve a responsive design, ensuring the website is optimized for various devicesand screen sizes.",
+    technologies: ["HTML", "CSS", "Javascript"],
+  },
   {
     title: "E-Commerce Website",
     image: project1,
